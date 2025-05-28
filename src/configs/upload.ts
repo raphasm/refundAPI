@@ -10,7 +10,8 @@ const __dirname = dirname(__filename)
 const TMP_FOLDER = path.resolve(__dirname, '..', '..', 'tmp')
 const UPLOADS_FOLDER = path.resolve(TMP_FOLDER, 'uploads')
 
-const MAX_FILE_SIZE = 1024 * 1024 * 3 //3MB
+const MAX_SIZE = 3 //3MB
+const MAX_FILE_SIZE = 1024 * 1024 * MAX_SIZE
 const ACCEPTED_IMAGE_TYPES = ['image/jpeg', 'image/jpg', 'image/png']
 
 const MULTER = {
@@ -31,4 +32,5 @@ export default {
   MAX_FILE_SIZE,
   ACCEPTED_IMAGE_TYPES,
   MULTER,
+  MAX_SIZE,
 }
